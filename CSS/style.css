@@ -94,6 +94,9 @@ body {
 .button:focus {
     background-color: var(--hover-bg-color);
     color: var(--hover-text-color);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 
+    0 1px 2px 0 rgba(0, 0, 0, 0.08), 
+    0 3px 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 .hero-button:hover {
@@ -122,13 +125,17 @@ body {
     background-color: var(--social-links-bg-hover);
 }
 
-
 .clients-list-link:hover,
 .clients-list-link:focus {
     fill: var(--hover-color);
     border-color: var(--hover-color);
 }
 
+.example-item:hover {
+    box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16), 
+    0 4px 4px 0 rgba(0, 0, 0, 0.06), 
+    0 1px 1px 0 rgba(0, 0, 0, 0.12);
+}
 
 
 
@@ -377,6 +384,7 @@ body {
     margin-right: 30px;
     text-align: center;
     background-color: var(--team-item-bg-color);
+    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
 }
 
 .team-item:nth-child(4n) {
