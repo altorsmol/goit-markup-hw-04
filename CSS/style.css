@@ -14,6 +14,9 @@
     --hover-text-color: #FFFFFF;
     --team-item-bg-color: #FFFFFF;
     --social-links-color: #AFB1B8;
+    --social-links-hover: rgba(255, 255, 255, 1);
+    --social-links-bg-hover: rgba(33, 150, 243, 1);
+    --social-icons-links-footer: #FFFFFF;
 }
 
 html {
@@ -51,7 +54,9 @@ body {
     color: var(--main-text-color);
 }
 
+
 /* Скрытые элементы */
+
 .visually-hidden {
     position: absolute !important;
     clip: rect(1px 1px 1px 1px);
@@ -76,9 +81,13 @@ body {
     color: inherit;
 }
 
+
+/* Hover */
+
 .link:hover,
 .link:focus {
     color: var(--hover-color);
+    fill: var(--hover-color);
 }
 
 .button:hover,
@@ -90,6 +99,38 @@ body {
 .hero-button:hover {
     color:var(--hero-button-bg-color)
 }
+
+.contacts-nav:hover,
+.contacts-nav:focus {
+    fill: var(--hover-color);
+    color: var(--hover-color);
+}
+
+.icon-tel:hover,
+.icon-tel:focus {
+    fill: var(--hover-color);
+}
+
+.icon-email:hover,
+.icon-email:focus {
+    fill: var(--hover-color);
+}
+
+.social-icons-link:hover,
+.social-icons-link:focus {
+    fill: var(--social-links-hover);
+    background-color: var(--social-links-bg-hover);
+}
+
+
+.clients-list-link:hover,
+.clients-list-link:focus {
+    fill: var(--hover-color);
+    border-color: var(--hover-color);
+}
+
+
+
 
 .list {
     margin: 0;
@@ -198,12 +239,20 @@ body {
 .site-nav-item {
     display: inline-flex;
     align-items: center;
-} 
+}
+
+.contacts-nav {
+    display: inline-flex;
+    align-items: center;
+    fill: var(--main-text-color);
+}
+
 
 /* HERO */
 
 .overlay {
-    background-image: url(../images/hero-img.png), url(../images/hero-overlay.png), url(../images/hero-bg.png);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
+    url(../images/hero-img.png), url(../images/hero-bg.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -335,7 +384,7 @@ body {
 }
 
 .list-team-content {
-    padding: 30px 59px;
+    padding: 30px 32px;
 }
 
 .advantage-title {
@@ -360,6 +409,7 @@ body {
 }
 
 .team-member-prophecy {
+    margin-bottom: 16px;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.19;
@@ -371,6 +421,7 @@ body {
 .social-icons {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .social-icons .icon {
@@ -464,6 +515,10 @@ padding-bottom: 94px;
     padding-bottom: 94px;
 }
 
+.clients-title {
+    margin-bottom: 50px;
+}
+
 .clients-list {
     justify-content: center;
     display: flex;
@@ -474,21 +529,17 @@ padding-bottom: 94px;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 170px;
     height: 90px;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
     fill: #AFB1B8;
 }
 
-.clients-list-item {
-    flex-basis: calc((100% - 180px) / 6);
+.clients-list-item:not(:last-child) {
+    margin-right: 30px;
 }
 
-.clients-list-link:hover,
-.clients-list-link:focus {
-    fill: var(--hover-color);
-    border-color: var(--hover-color);
-}
 
 /* Footer */
 
@@ -527,7 +578,7 @@ padding-bottom: 94px;
 
 .all-parts-footer {
     display: flex;
-    align-items: inherit;
+    align-items: baseline;
 }
 
 .footer-links-title {
@@ -537,6 +588,20 @@ padding-bottom: 94px;
 
 .social-links-footer {
     margin-left: 70px;
+}
+
+.social-links-footer .social-icons-link {
+    fill: var(--social-icons-links-footer);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+}
+
+.social-links-footer .social-icons-link:hover,
+.social-links-footer .social-icons-link:focus {
+    background-color: var(--hover-bg-color);
+}
+
+.social-links-footer .social-icons-item:not(:last-child) {
+    margin-right: 10px;
 }
 
 .site-nav-footer .item:not(:last-child) {
